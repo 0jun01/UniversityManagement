@@ -30,7 +30,7 @@
 
 .logo {
 	width: 400px;
-	height: 70px;
+	height: 225px;
 }
 
 .main--container {
@@ -150,7 +150,7 @@ input[type=number] {
 
 	<div class="login--div">
 		<div class="main--logo">
-			<a href="#"><img class="logo" alt="" src="/images/logo.png"></a>
+			<a href="#"><img class="logo" alt="" src="resources/img/logo.png"></a>
 		</div>
 
 		<form action="/login" method="post" class="main--container">
