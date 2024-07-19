@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,6 +9,7 @@
 </head>
 <body>
 	<header>
+
 		<div class="header_top_box">
 			<ul class="header_top_info_ul">
 				<li class="header_top_info_li">(변영준)님 id: 17510048</li>
@@ -22,7 +22,7 @@
 			<!-- <h1>-- 학생 접속 시 --</h1> -->
 			<ul class="header_menu_bar">
 				<li class="header_menu_bar_li"><a href="${pageContext.request.contextPath}/header.jsp">홈</a>
-				<li class="header_menu_bar_li"><a href="${pageContext.request.contextPath}/info">MY</a>
+				<li class="header_menu_bar_li"><a href="${pageContext.request.contextPath}/info/student">MY</a>
 				<li class="header_menu_bar_li"><a href="${pageContext.request.contextPath}/subject">수업</a>
 				<li class="header_menu_bar_li"><a href="/six/header.jsp"><img src="${pageContext.request.contextPath}/resources/img/bazzi_front.png" alt="로고이미지"></a>
 				<li class="header_menu_bar_li"><a href="${pageContext.request.contextPath}/sugang">수강신청</a>
@@ -40,7 +40,7 @@
 			<h1>-- 교사 접속 시 --</h1>
 			<ul>
 				<li><a href="${pageContext.request.contextPath}/header.jsp">홈</a>
-				<li><a href="${pageContext.request.contextPath}/info">MY</a>
+				<li><a href="${pageContext.request.contextPath}/info/proffessor">MY</a>
 				<li><a href="${pageContext.request.contextPath}/subject">수업</a>
 				<li><a href="${pageContext.request.contextPath}/notice">학사정보</a>
 			</ul> --%>

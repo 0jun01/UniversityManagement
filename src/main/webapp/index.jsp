@@ -147,6 +147,7 @@ input[type=number] {
 </style>
 </head>
 <body>
+<<<<<<< HEAD
 
 	<div class="login--div">
 		<div class="main--logo">
@@ -179,5 +180,27 @@ input[type=number] {
 		</form>
 	</div>
 
+=======
+	
+<div class="container">
+	<h2> 로그인</h2>
+
+	<form action="${pageContext.request.contextPath}/user/signIn" method="post">
+		<div>
+		<label for="username">사용자 이름:</label>
+		<input type="text" id="username" name="username" value="2023000001">
+		<label for="password">비밀번호:</label>
+		<input type="password" id="password" name="password" value="0000">
+		<button type="submit">로그인</button>
+	</div>
+	</form>
+
+
+
+</div>
+
+
+	
+>>>>>>> ebdbf330f5c3c8e759771b450707cde9ae3e9a06
 </body>
 </html>

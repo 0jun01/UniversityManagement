@@ -1,13 +1,12 @@
 package com.uni.system.repository.interfaces;
 
 import java.util.List;
-
 import com.uni.system.repository.model.*;
 
 public interface StudentRepository {
 	
 	// MY 페이지
-	void viewMyInfo();      // 내 정보 보기
+	Student viewMyInfo(int userid);      // 내 정보 보기
 	void changePassword();  // 비밀번호 변경
 	void addBreak();       // 휴학신청 
 	List<BreakApp> viewAllBreak(); // 휴학신청내역
@@ -15,7 +14,7 @@ public interface StudentRepository {
 	void tuitionbill(); // 등록금 납부 고지서
 	
 	// 수업
-	void viewAllClass(); // 전체 강의 조회
+	List<Subject> viewAllClass(); // 전체 강의 조회
 	
 	// 수강 신청
 	void viewAllClassSchedule(); // 강의 시간표 조회
