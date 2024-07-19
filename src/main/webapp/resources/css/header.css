@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+/* 기본 스타일 */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.header_top_box {
+	background-color: #333;
+	padding: 10px 20px;
+	color: white;
+}
+
+.header_top_info_ul {
+	display: flex;
+	justify-content: flex-end;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.header_top_info_li {
+	margin-left: 15px;
+}
+
+.header_top_info_li a {
+	color: white;
+	text-decoration: none;
+}
+
+.header_menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+	background-color: #f8f9fa;
+}
+
+.header_menu .logo {
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #007bff;
+	text-decoration: none;
+}
+
+.header_menu_bar {
+    display: flex;
+    justify-content: space-between; /* 이 속성이 자식 요소들을 일정한 간격으로 배치합니다 */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%; /* 필요한 경우 너비를 조정하세요 */
+}
+
+.header_menu_bar_li {
+	margin-left: 20px;
+}
+
+.header_menu_bar_li a {
+	text-decoration: none;
+	color: #333;
+	font-weight: bold;
+	padding: 5px 10px;
+}
+
+.header_menu_bar_li a:hover {
+	color: #007bff;
+}
+
+/* 반응형 스타일 */
+@media ( max-width : 768px) {
+	.header_menu {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.header_menu_bar {
+		flex-direction: column;
+		width: 100%;
+	}
+	.header_menu_bar_li {
+		margin: 10px 0;
+	}
+}
