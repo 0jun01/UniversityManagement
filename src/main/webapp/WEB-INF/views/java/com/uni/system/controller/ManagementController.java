@@ -43,7 +43,6 @@ public class ManagementController extends HttpServlet {
 			handleProfessor(request, response);
 			break;
 		case "/addStudent":
-			System.out.println("AddStudent");
 			request.getRequestDispatcher("/WEB-INF/views/user/addStudent.jsp").forward(request, response);
 			break;
 		case "/addProfessor":
@@ -123,11 +122,21 @@ public class ManagementController extends HttpServlet {
 			break;
 		case "/addProfessor":
 			addProfessor(request, response);
+			break;
 		case "/addStaff":
 			addStaff(request, response);
+			break;
+		case "/sendTuition":
+			sendTutition(request, response);
+			break;
 		default:
 			break;
 		}
+		
+	}
+
+	private void sendTutition(HttpServletRequest request, HttpServletResponse response) {
+		
 		
 	}
 

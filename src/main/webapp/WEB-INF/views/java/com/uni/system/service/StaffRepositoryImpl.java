@@ -26,6 +26,7 @@ public class StaffRepositoryImpl implements StaffRepository{
 	final String VIEW_ALL_PROFESSOR = " SELECT * FROM professor_tb limit ? offset ? ";
 	final String VIEW_ALL_PROFESSOR_COUNT  = " SELECT count(*) AS row_count FROM professor_tb ";
 	
+	
 	@Override
 	public Staff viewMyInfo(int userId) {
 		Staff staff = null;
