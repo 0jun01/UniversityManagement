@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
 <%@ include file="/WEB-INF/views/layout/header.jsp"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/subject.css">
 </head>
 <body>
 
@@ -164,6 +164,11 @@
 						</tr>
 					</thead>
 					<tbody>
+					<c:choose>
+					<c:when test="${empty subjectList}">
+						<h1>검색된 내용이 없습니다.</h1>
+						</c:when>
+						<c:otherwise>
 						<c:forEach var="subject" items="${subjectList}">
                 <tr>
                     <td>${subject.subYear}-${subject.semester}학기</td>
@@ -179,6 +184,8 @@
                     <td>조회</td>
                 </tr>
             </c:forEach>
+            </c:otherwise>
+            </c:choose>
 					</tbody>
 				</table>
 			</div>

@@ -28,6 +28,7 @@ public class StudentRepositoryImpl implements StudentRepository{
 			try (PreparedStatement pstmt = conn.prepareStatement(STUDENT_INFO)){
 				pstmt.setInt(1, userid);
 				ResultSet rs =  pstmt.executeQuery();
+				conn.commit();
 				if(rs.next()) {
 					student = Student.builder()
 							.id(rs.getInt("id"))
@@ -75,27 +76,6 @@ public class StudentRepositoryImpl implements StudentRepository{
 		
 	}
 	
-
-
-	@Override
-	public void addBreak() {
-		
-	}
-
-	@Override
-	public List<BreakApp> viewAllBreak() {
-		return null;
-	}
-
-	@Override
-	public void viewTuition() {
-		
-	}
-
-	@Override
-	public void tuitionbill() {
-		
-	}
 
 	@Override
 	public List<Subject> viewAllClass() {

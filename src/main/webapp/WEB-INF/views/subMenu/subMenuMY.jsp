@@ -16,7 +16,7 @@
 						<td><a href="${pageContext.request.contextPath}/info/student" class="seleted-menu">내 정보 조회</a></td>
 					</tr>
 					<tr>
-						<td><a href="${pageContext.request.contextPath}/info/password">비밀번호 변경</a></td>
+						<td><a href="${pageContext.request.contextPath}/info/studentPassword">비밀번호 변경</a></td>
 					</tr>
 					<tr>
 						<tr>

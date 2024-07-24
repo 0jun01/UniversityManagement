@@ -6,6 +6,7 @@ public interface UserRepository {
 	
 	UserDTO getUserbyIdPassword(int username, String password);
 	UserDTO getUserInfoById(int userId); 
+	void changePassword(String password, int userId);
 
 }
 	

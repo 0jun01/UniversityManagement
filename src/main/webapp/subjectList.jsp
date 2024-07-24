@@ -48,7 +48,7 @@
 					<option value="전공">전공</option>
 					<option value="교양">교양</option>
 				</select>
-				<!-- 대상학과 콤보박스 -->
+				<!-- 대상혁과 콤보박스 -->
 				<label for="deptId">개설학과</label>
 				<select name="deptId" id="deptId">
 					<!-- TODO DB 개설학과 가져오기 -->

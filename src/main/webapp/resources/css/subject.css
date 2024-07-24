@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+
+
+.btn-back {
+	background-color: #6c757d;
+	color: white;
+}
+
+.btn-back:hover {
+	background-color: #5a6268;
+}
+
+.pagination {
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+
+.pagination a {
+	display: inline-block;
+	padding: 5px 10px;
+	margin: 0 5px;
+	border: 1px solid #ddd;
+	text-decoration: none;
+	color: #007bff;
+}
+
+.pagination a:hover {
+	background-color: #3CB371;
+	color: white;
+}
+
+.current-page {
+	display: inline-block;
+	padding: 5px 10px;
+	background-color: #3CB371;
+	border: 1px solid #007bff;
+	border-radius: 4px;
+	color: white;
+}

@@ -8,10 +8,6 @@ public interface StudentRepository {
 	// MY 페이지
 	Student viewMyInfo(int userid);      // 내 정보 보기
 	void changePassword(String password, int userId); // 비밀번호 변경
-	void addBreak();       // 휴학신청 
-	List<BreakApp> viewAllBreak(); // 휴학신청내역
-	void viewTuition(); // 등록금 내역 조회
-	void tuitionbill(); // 등록금 납부 고지서
 	
 	// 수업
 	List<Subject> viewAllClass(); // 전체 강의 조회

@@ -1,7 +1,7 @@
 <%@page import="com.uni.system.repository.model.Student"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="/WEB-INF/views/layout/header.jsp"%>
-<%@ include file="/WEB-INF/views/student/subMenuMY.jsp"%>
+<%@ include file="/WEB-INF/views/subMenu/subMenuMY.jsp"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 
@@ -23,7 +23,7 @@ System.out.print(session.getAttribute("studentInfo"));
 			</tr>
 			<tr>
 				<th>학번</th>
-				<td>${principal.id}</td>
+				<td>${studentInfo.id}</td>
 				<th>학년</th>
 				<td>${studentInfo.grade}</td>
 			</tr>
@@ -57,19 +57,19 @@ System.out.print(session.getAttribute("studentInfo"));
 				<td>  
 				
 				<input type="radio" id="normal" name="fav_language" value="normal">   
-				<label for="normal">일반휴학</label><br>   
+				<label for="일반 휴학">일반휴학</label><br>   
 				
 				<input type="radio" id="pregnant" name="fav_language" value="pregnant">   
-				<label for="pregnant">임신·출산·육아휴학</label><br>   
+				<label for="임신·출산·육아 휴학">임신·출산·육아휴학</label><br>   
 				
 				<input type="radio" id="disease" name="fav_language" value="disease">
-				<label for="disease">질병휴학</label>
+				<label for="질병 휴학">질병휴학</label>
 				
 				<input type="radio" id="founded" name="fav_language" value="founded">
-				<label for="founded">창업휴학</label>
+				<label for="창업 휴학">창업휴학</label>
 				
 				<input type="radio" id="army" name="fav_language" value="army">
-				<label for="army">군입대휴학</label>
+				<label for="군입대 휴학">군입대휴학</label>
 
 				</td>
 			</tr>

@@ -6,18 +6,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+@ToString
 @Data
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
-public class UserDTO {
-	private int id;
-	private String password;
-	private String userRole;
-	private String name;
-	private String studentName;
-	private String staffName;
-	private String professorName;
+@Builder
 
+public class SugangDTO {
+	String type;
+	String deptName;
+	String lectureName;
 }

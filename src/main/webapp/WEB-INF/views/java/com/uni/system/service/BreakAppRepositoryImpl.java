@@ -42,14 +42,16 @@ public class BreakAppRepositoryImpl implements BreakAppRepository {
 	}
 
 	@Override
-	public List<BreakApp> showBreadList(int userId) {
+	public BreakApp showBreakList(int userId) {
 		List<BreakApp> breakList = new ArrayList<BreakApp>();
+		BreakApp breakApp = null;
 		try (Connection conn = DBUtil.getConnection()){
 			try (PreparedStatement pstmt = conn.prepareStatement(SHOW_BREAK)){
 				pstmt.setInt(1, userId);
+				System.out.println("UserId in Repository : " + userId);
 				ResultSet rs = pstmt.executeQuery();
 				if(rs.next()) {
-					BreakApp breakApp = BreakApp.builder()
+					breakApp = BreakApp.builder()
 							.studentId(rs.getInt("student_id"))
 							.studentGrade(rs.getInt("student_grade"))
 							.fromYear(rs.getInt("from_year"))
@@ -60,6 +62,7 @@ public class BreakAppRepositoryImpl implements BreakAppRepository {
 							.appDate(rs.getDate("app_date"))
 							.status(rs.getString("status"))
 							.build();
+					System.out.println("breakApp in Repository : " + breakApp.toString());
 					breakList.add(breakApp);
 				}
 			} catch (Exception e) {
@@ -68,8 +71,7 @@ public class BreakAppRepositoryImpl implements BreakAppRepository {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-		return breakList;
+		return breakApp;
 	}
 
 	@Override

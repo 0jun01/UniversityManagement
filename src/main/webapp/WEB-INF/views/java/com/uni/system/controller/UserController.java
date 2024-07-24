@@ -23,14 +23,11 @@ public class UserController extends HttpServlet {
 
 	}
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String action = request.getPathInfo();
 		System.out.println("DOGET PathInfo : " + action);
 		switch (action) {
-		case "/signup":
-			request.getRequestDispatcher("/WEB-INF/six/user/signup.jsp").forward(request, response);
-			break;
+
 		case "/professor":
 			request.getRequestDispatcher("/WEB-INF/views/user/professorInfo.jsp").forward(request, response);
 			break;
@@ -42,6 +39,7 @@ public class UserController extends HttpServlet {
 			break;
 		case "/employee":
 			request.getRequestDispatcher("/WEB-INF/views/user/employeeInfo.jsp").forward(request, response);
+			
 		default:
 			response.sendError(HttpServletResponse.SC_NOT_FOUND);
 			break;
@@ -52,7 +50,7 @@ public class UserController extends HttpServlet {
 		HttpSession session = request.getSession();
 		session.invalidate();
 
-		response.sendRedirect(request.getContextPath() + "/user/index");
+		response.sendRedirect(request.getContextPath() + "/index.jsp");
 
 	}
 
@@ -89,9 +87,8 @@ public class UserController extends HttpServlet {
 			System.out.println("Login Success : " + principal);
 			session.setAttribute("principal", principal); // header.jsp, 각종 info 에 끌고 오기 위해 속성 설정해주기.
 			response.sendRedirect(request.getContextPath() + "/user/home");
-			System.out.println("홈제에스피 되나");
 		} else {
-			response.sendRedirect(request.getContextPath() + "/user?message=invalid");
+			response.sendRedirect(request.getContextPath() + "/index.jsp");
 		}
 
 	}

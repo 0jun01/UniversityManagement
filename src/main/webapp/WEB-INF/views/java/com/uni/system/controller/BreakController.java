@@ -26,8 +26,7 @@ public class BreakController extends HttpServlet {
 		breakAppRepository = new BreakAppRepositoryImpl();
 	}
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String action = request.getPathInfo();
 
 		switch (action) {
@@ -36,6 +35,7 @@ public class BreakController extends HttpServlet {
 			break;
 
 		case "/list":
+			showAllBreak(request, response);
 			request.getRequestDispatcher("/WEB-INF/views/break/breakList.jsp").forward(request, response);
 			break;
 
@@ -43,6 +43,14 @@ public class BreakController extends HttpServlet {
 			break;
 		}
 
+	}
+
+	private void showAllBreak(HttpServletRequest request, HttpServletResponse response) {
+		HttpSession session = request.getSession();
+		UserDTO dto = (UserDTO) session.getAttribute("principal");
+		BreakApp breakApp = breakAppRepository.showBreakList(dto.getId());
+		session.setAttribute("breakApp", breakApp);
+		
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -80,7 +88,6 @@ public class BreakController extends HttpServlet {
 
 		// session 저장
 		HttpSession session = request.getSession();
-
 		Student studentInfo = (Student) session.getAttribute("studentInfo");
 		System.out.println("StudentInfo : " + studentInfo.getId());
 		BreakApp breakApp = breakAppRepository.checkDuplicate(studentInfo.getId());
