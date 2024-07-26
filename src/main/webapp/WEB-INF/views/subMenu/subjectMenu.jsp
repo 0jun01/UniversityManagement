@@ -10,7 +10,7 @@
 <%
 	session.getAttribute("pricipal");
 %>
-	<div>
+<div>
 		<div class="sub_menu">
 			<div class="sub_menu_top">
 				<h2>수업</h2>
@@ -30,6 +30,6 @@
 					</tbody>
 				</table>
 			</div>
-		</div>
+	</div>
 </body>
 </html>

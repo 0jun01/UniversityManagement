@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+ <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/subject.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/subMenu.css">
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,9 +9,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div class="alltable">
+	<div class="sub-menu">
 	<div class="sub-bar">
 		<div class="sub-bar-top">
+		<div class="sub--menu--top">
+			<h2>MY</h2>
+			</div>
+			<div class ="sub--menu--mid">
 			<table class="sub-bar-list" border="1">
 				<tbody>
 					<tr>
@@ -42,6 +48,7 @@
 					</tr>
 				</tbody>
 			</table>
+			</div>
 		</div>
 	</div>
 </div>

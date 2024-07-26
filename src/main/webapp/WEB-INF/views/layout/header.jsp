@@ -12,10 +12,6 @@
 	request.getAttribute("principal");
 	%>
 	<header>
-		<nav class="header_menu">
-			
-			<c:choose>
-				<c:when test="${principal.userRole.equals(\"student\")}">
 					<div class="header_top_box">
 						<ul class="header_top_info_ul">
 							<li class="header_top_info_li">${principal.name}님 / id:${principal.id}</li>
@@ -23,12 +19,16 @@
 							<li class="header_top_info_li"><a href="${pageContext.request.contextPath}/user/logout">로그아웃</a></li>
 						</ul>
 					</div>
+		<nav class="header_menu">
+			
+			<c:choose>
+				<c:when test="${principal.userRole.equals(\"student\")}">
 					
 					<ul class="header_menu_bar">	
+						<li class="header_menu_bar_li"><a href="${pageContext.request.contextPath}/user/home"><img src="${pageContext.request.contextPath}/resources/img/logo.png" alt="로고이미지"></a>
 						<li class="header_menu_bar_li"><a href="${pageContext.request.contextPath}/user/home">홈</a>
 						<li class="header_menu_bar_li"><a href="${pageContext.request.contextPath}/info/student">MY</a>
 						<li class="header_menu_bar_li"><a href="${pageContext.request.contextPath}/subject/subject">수업</a>
-						<li class="header_menu_bar_li"><a href="${pageContext.request.contextPath}/user/home"><img src="${pageContext.request.contextPath}/resources/img/logo.png" alt="로고이미지"></a>
 						<li class="header_menu_bar_li"><a href="${pageContext.request.contextPath}/sugang/subjectList">수강신청</a>
 						<li class="header_menu_bar_li"><a href="${pageContext.request.contextPath}/thisSemester">성적</a>
 						<li class="header_menu_bar_li"><a href="${pageContext.request.contextPath}/notice/notice">학사정보</a>
@@ -48,7 +48,7 @@
 						<li class="header_menu_bar_li"><a href="${pageContext.request.contextPath}/info/professorMy">MY</a>
 						<li class="header_menu_bar_li"><a href="${pageContext.request.contextPath}/info/professor">MY</a>
 						<li class="header_menu_bar_li"><a href="${pageContext.request.contextPath}/subject/subject">수업</a>
-						<li class="header_menu_bar_li"><a href="/six/header.jsp"><img src="${pageContext.request.contextPath}/resources/img/logo.png" alt="로고이미지"></a>
+						
 						<li class="header_menu_bar_li"><a href="${pageContext.request.contextPath}/notice">학사정보</a>
 					</ul>
 				</c:when>

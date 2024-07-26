@@ -1,0 +1,63 @@
+@charset "UTF-8";
+@import url("/subMenu");
+table {
+    border-collapse: collapse;
+  
+    text-indent: initial;
+    line-height: normal;
+    font-weight: normal;
+    font-size: medium;
+    font-style: normal;
+    color: -internal-quirk-inherit;
+    text-align: start;
+    border-spacing: 2px;
+    white-space: normal;
+    font-variant: normal;
+}
+.sub--menu {
+    min-width: 230px;
+    margin-right: 80px;
+}
+
+.sub_menu_top {
+    text-align: center;
+    padding: 26px 0;
+    border-bottom: 3px solid #31c182;
+    width: 210px;
+}
+
+.sub--menu--mid {
+    display: flex;
+    justify-content: flex-start;
+}
+.sub--menu--table td a {
+    padding: 20px 10px;
+}
+.sub-bar-list td a {
+    padding: 20px 10px;
+}
+.sub--menu--table td {
+    border-left: hidden;
+    border-right: hidden;
+    width: 200px;
+    height: 71px;
+    padding: 20px 0;
+    font-size: 20px;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+td {
+    display: table-cell;
+    vertical-align: inherit;
+    unicode-bidi: isolate;
+}
+.sub-bar-top td {
+    border-left: hidden;
+    border-right: hidden;
+    width: 200px;
+    height: 71px;
+    padding: 20px 0;
+    font-size: 20px;
+}

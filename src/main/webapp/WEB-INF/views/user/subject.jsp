@@ -3,6 +3,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/subject.css">
+ <link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/resources/css/subMenu.css">
 </head>
 <body>
 <%
@@ -10,12 +12,13 @@ session.getAttribute("pricipal");
 %>
 
 	<!-- 세부 메뉴 + 메인 -->
-	<div>
+
+		<div class="sub-bar-top">
 		<div class="sub_menu">
 			<div class="sub_menu_top">
 				<h2>수업</h2>
 			</div>
-			<div class="sub_menu_mid">
+			<div class="sub--menu--mid">
 				<table class="sub_menu_table" border="1">
 					<tbody>
 						<tr>
@@ -33,7 +36,7 @@ session.getAttribute("pricipal");
 		</div>
 		<!-- 메뉴 -->
 		<main>
-			<h1>전체 강의 조회</h1>
+			<h2>전체 강의 조회</h2>
 			<div class="filter">
 				<form action="${pageContext.request.contextPath}/subject/list" method="GET">
 					<label>연도</label>

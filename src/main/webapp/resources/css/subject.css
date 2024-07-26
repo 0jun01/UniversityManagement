@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-
-
 .btn-back {
 	background-color: #6c757d;
 	color: white;
@@ -38,4 +36,10 @@
 	border: 1px solid #007bff;
 	border-radius: 4px;
 	color: white;
+}
+.filter{
+	width: 800px; 
+}
+td {
+    font-size: 10px; /* 기존 5px에서 10px으로 변경 */
 }
