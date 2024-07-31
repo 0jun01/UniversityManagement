@@ -32,14 +32,28 @@
 						<tr>
 							<td>${breakList.appDate}</td>
 							<td>${breakList.studentId}</td>
-							<td>${breakList.type}</td>
-							<td>${breakList.fromSemester}</td>
-							<td>${breakList.toSemester}</td>
-							<form
-								action="${pageContext.request.contextPath}/management/processBreak"
-								method="post">
-								<td><button type="submit" name="clickButton"
-										value="${breakList.studentId}">Click</button></td>
+							<c:choose>
+								<c:when test="${breakList.type eq 'normal'}">
+									<td>일반 휴학</td>
+								</c:when>
+								<c:when test="${breakList.type eq 'pregnant'}">
+									<td>임신·출산·육아휴학</td>
+								</c:when>
+								<c:when test="${breakList.type eq 'disease'}">
+									<td>질병휴학</td>
+								</c:when>
+								<c:when test="${breakList.type eq 'founded'}">
+									<td>창업휴학</td>
+								</c:when>
+								<c:when test="${breakList.type eq 'army'}">
+									<td>군입대휴학</td>
+								</c:when>
+							</c:choose>
+							
+							<td>${breakList.fromSemester}학기</td>
+							<td>${breakList.toSemester}학기</td>
+							<form action="${pageContext.request.contextPath}/management/processBreak" method="post">
+								<td><button type="submit" name="clickButton" value="${breakList.studentId}">휴학 처리</button></td>
 							</form>
 						</tr>
 					</c:forEach>

@@ -50,7 +50,6 @@ public class BreakController extends HttpServlet {
 		UserDTO dto = (UserDTO) session.getAttribute("principal");
 		
 		List<BreakApp> breakApp = breakAppRepository.getBreakList(dto.getId());
-		System.out.println("BreakApp in Controller :" + breakApp.toString());
 		request.setAttribute("breakAppList", breakApp);
 		
 		request.getRequestDispatcher("/WEB-INF/views/break/breakList.jsp").forward(request, response);
@@ -97,7 +96,7 @@ public class BreakController extends HttpServlet {
 		
 		if (breakApp != null) { // 이미 썼다. 그러면 리턴
 			response.sendRedirect(request.getContextPath() + "/break/send?message=error");
-		
+			return;
 		} else { // 쓴 적이 없다. null 이다.
 				breakAppRepository.addBreak(studentInfo.getId(), studentInfo.getGrade(), 2024, fromSemester, toYear, toSemster, breakKinds);
 				session.setAttribute("breakedStudent", studentInfo.getId());

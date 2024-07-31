@@ -76,6 +76,7 @@
 						<td>${studentList.gender}</td>
 						<td>${studentList.address}</td>
 						<td>${studentList.tel}</td>
+						<td>${studentList.email}</td>
 						<td>${studentList.deptId}</td>
 						<td>${studentList.grade}</td>
 						<td>${studentList.entranceDate}</td>

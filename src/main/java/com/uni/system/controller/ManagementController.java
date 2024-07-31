@@ -140,11 +140,9 @@ public class ManagementController extends HttpServlet {
 			addStaff(request, response);
 			break;
 		case "/sendTuition":
-			System.out.println("/sendTuition 호출");
 			sendTuition(request, response);
 			break;
 		case "/processBreak":
-			System.out.println("/processBreak 호출");
 			processBreak(request, response);
 		default:
 			break;
@@ -152,12 +150,11 @@ public class ManagementController extends HttpServlet {
 		
 	}
 	// git test
-	private void processBreak(HttpServletRequest request, HttpServletResponse response) {
+	private void processBreak(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		int studentId = Integer.parseInt(request.getParameter("clickButton")); 
-		System.out.println("학생 ID 클릭으로 뽑아보기" + studentId);
-		
 		
 		staffRepository.processBreak(studentId);
+		response.sendRedirect(request.getContextPath() + "/management/breakList");
 	}
 
 	private void sendTuition(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -212,7 +209,7 @@ public class ManagementController extends HttpServlet {
 		
 		staffRepository.addProfessor(name, birthDate, gender, address, tel, email, deptId);
 		
-		request.getRequestDispatcher("/WEB-INF/views/user/addProfessor.jsp").forward(request, response);
+		response.sendRedirect(request.getContextPath() + "/management/professorList");
 		
 	}
 
@@ -234,7 +231,7 @@ public class ManagementController extends HttpServlet {
 		
 		staffRepository.addStudent(name, birthDate, gender, address, tel, email, deptId, entranceDate);
 		
-		request.getRequestDispatcher("/WEB-INF/views/user/addStudent.jsp").forward(request, response);
+		response.sendRedirect(request.getContextPath() + "/management/studentList");
 	}
 
 }

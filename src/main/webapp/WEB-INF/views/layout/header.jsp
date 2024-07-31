@@ -74,7 +74,7 @@
 						<li class="header_menu_bar_li"><a
 							href="${pageContext.request.contextPath}/subject/subject">수업</a>
 						<li class="header_menu_bar_li"><a
-							href="${pageContext.request.contextPath}/notice">학사정보</a>
+							href="${pageContext.request.contextPath}/notice/notice">학사정보</a>
 					</ul>
 				</c:when>
 
@@ -91,11 +91,11 @@
 						<li class="header_menu_bar_li"><a
 							href="${pageContext.request.contextPath}/info/staff">MY</a>
 						<li class="header_menu_bar_li"><a
-							href="${pageContext.request.contextPath}/management/addStudent">학사관리</a>
+							href="${pageContext.request.contextPath}/management/studentList">학사관리</a>
 						<li class="header_menu_bar_li"><a
 							href="${pageContext.request.contextPath}/admin/college">등록</a>
 						<li class="header_menu_bar_li"><a
-							href="${pageContext.request.contextPath}/notice">학사정보</a>
+							href="${pageContext.request.contextPath}/notice/notice">학사정보</a>
 					</ul>
 
 				</c:otherwise>
