@@ -8,6 +8,7 @@ public interface StudentRepository {
 	// MY 페이지
 	Student viewMyInfo(int userid);      // 내 정보 보기
 	void changePassword(String password, int userId); // 비밀번호 변경
+	
 	void changeInfomation(String address, int tel, String email, int userId);
 	// 수업
 	List<Subject> viewAllClass(); // 전체 강의 조회

@@ -1,0 +1,87 @@
+@charset "UTF-8";
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8f4; /* 부드러운 초록색 배경 */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* d-flex 컨테이너 */
+.d-flex {
+    display: flex;
+}
+
+/* 서브 메뉴 스타일링 */
+.sub-menu {
+    background-color: #d0f0c0; /* 연한 초록색 배경 */
+    padding: 20px;
+    width: 200px;
+    margin-right: 20px;
+}
+
+.sub-menu-top h3 {
+    margin: 0;
+    color: #004d00; /* 진한 초록색 텍스트 */
+}
+
+.sub-menu-middle {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.sub-menu-middle td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #004d00; /* 진한 초록색 경계선 */
+}
+
+.sub-menu-middle a.menu {
+    display: block;
+    padding: 10px;
+    color: #004d00; /* 진한 초록색 링크 */
+    text-decoration: none;
+}
+
+.sub-menu-middle a.menu:hover {
+    background-color: #c8e6c9; /* 마우스 오버 시 연한 초록색 배경 */
+}
+
+/* 전체 일정 제목 */
+h1 {
+    color: #004d00; /* 진한 초록색 제목 */
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* 일정 테이블 스타일링 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #004d00; /* 진한 초록색 경계선 */
+}
+
+table th {
+    background-color: #004d00; /* 진한 초록색 헤더 배경 */
+    color: #333333; /* 흰색 텍스트 */
+}
+
+/* 버튼 스타일링 (추가) */
+button {
+    background-color: #004d00; /* 진한 초록색 버튼 */
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #003300; /* 더 진한 초록색 버튼 */
+}

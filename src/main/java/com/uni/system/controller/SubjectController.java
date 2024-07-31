@@ -36,7 +36,6 @@ public class SubjectController extends HttpServlet {
 			handleList(request, response);
 			break;
 		case "/details":
-			System.out.println("들어오긴해?");
 			viewDetails(request, response);
 			break;
 

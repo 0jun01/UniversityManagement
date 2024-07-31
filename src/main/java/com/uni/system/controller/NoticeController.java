@@ -58,12 +58,14 @@ public class NoticeController extends HttpServlet {
 		case "/addregister":
 			addNotice(request, response);
 			break;
+		
 
 		default:
 			break;
 		}
 
 	}
+
 
 	private void addNotice(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		

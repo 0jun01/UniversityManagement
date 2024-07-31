@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <Context>
-
-
     <Resource 
         name="jdbc/six"
         auth="Container"
@@ -13,8 +11,9 @@
         connectionTimeout="30000"
         idleTimeout="60000"
         maxLifetime="1800000"
-        jdbcUrl="jdbc:mysql://localhost:3306/managementsystem?serverTimezone=Asia/Seoul" 
+        jdbcUrl="jdbc:mysql://192.168.0.25:3306/managementsystem?serverTimezone=Asia/Seoul" 
         driverClassName="com.mysql.cj.jdbc.Driver"
-        username="root"
-        password="asd123"/>
+        username="green1"
+        password="1q2w3e4r5t!"/>
+    
 </Context>

@@ -31,16 +31,19 @@ public class ScoreController extends HttpServlet {
 		}
 	}
 
-	private void handleCumulative(HttpServletRequest request, HttpServletResponse response) {
+	private void handleCumulative(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		request.getRequestDispatcher("WEB-INF/six/score/cumulativeScore.jsp").forward(request, response);
 	}
 
-	private void handleBySemester(HttpServletRequest request, HttpServletResponse response) {
+	private void handleBySemester(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		request.getRequestDispatcher("WEB-INF/six/score/bySemesterScore.jsp").forward(request, response);
 	}
 
-	private void handleThisSemester(HttpServletRequest request, HttpServletResponse response) {
+	private void handleThisSemester(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		request.getRequestDispatcher("WEB-INF/six/score/thisSemesterScore.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

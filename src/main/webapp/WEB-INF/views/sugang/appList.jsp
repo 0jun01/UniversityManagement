@@ -67,7 +67,7 @@
 													</form>
 												</c:otherwise>
 											</c:choose></td>
-									</tr>
+									</tr> 
 								</c:forEach>
 							</c:otherwise>
 						</c:choose>

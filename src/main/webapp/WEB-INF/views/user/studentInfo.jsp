@@ -18,7 +18,7 @@
 				<colgroup>
 					<col class="col1">
 					<col class="col2">
-					<col class="col3">
+				 	<col class="col3">
 					<col class="col4">
 				</colgroup>
 				<tbody>

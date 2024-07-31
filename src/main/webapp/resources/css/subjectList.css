@@ -1,122 +1,123 @@
 @charset "UTF-8";
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #333;
-    margin: 0;
-    padding: 0;
+	font-family: Arial, sans-serif;
+	line-height: 1.6;
+	background-color: #f9f9f9;
+	color: #333;
+	margin: 0;
+	padding: 0;
 }
 
 .registration_box {
-    margin: 0 auto;
-    padding: 20px;
-    max-width: 1200px;
-    background-color: #084808;
-    border: 1px solid #d4e2d4;
-    border-radius: 10px;
-	}
+	margin: 0 auto;
+	padding: 20px;
+	max-width: 1200px;
+	background-color: #084808;
+	border: 1px solid #d4e2d4;
+	border-radius: 10px;
+}
 
 .sub_menu {
-    float: left;
-    width: 17%;
-    padding: 20px;
-    background-color: #d4e2d4;
-    border-radius: 10px;
-    margin-right: 20px;
+	float: left;
+	width: 17%;
+	padding: 20px;
+	background-color: #d4e2d4;
+	border-radius: 10px;
+	margin-right: 20px;
+	max-height: 30vh;
 }
 
 main {
-    float: left;
-    width: 75%;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	float: left;
+	width: 75%;
+	padding: 20px;
+	background-color: #ffffff;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    color: #4caf50;
-    margin-bottom: 20px;
+	color: #4caf50;
+	margin-bottom: 20px;
 }
 
 .sub_filter form {
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+	margin-bottom: 20px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
 }
 
 .sub_filter label {
-    margin-right: 10px;
-    color: #4caf50;
+	margin-right: 10px;
+	color: #4caf50;
 }
 
 .sub_filter select, .sub_filter input[type="text"], .sub_filter button {
-    padding: 5px;
-    border: 1px solid #4caf50;
-    border-radius: 5px;
-    outline: none;
+	padding: 5px;
+	border: 1px solid #4caf50;
+	border-radius: 5px;
+	outline: none;
 }
 
 .sub_filter button {
-    background-color: #4caf50;
-    color: #ffffff;
-    cursor: pointer;
-    transition: background-color 0.3s;
+	background-color: #4caf50;
+	color: #ffffff;
+	cursor: pointer;
+	transition: background-color 0.3s;
 }
 
 .sub_filter button:hover {
-    background-color: #45a049;
+	background-color: #45a049;
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 20px;
 }
 
 table th, table td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: left;
+	border: 1px solid #333333;
+	padding: 10px;
+	text-align: left;
 }
 
 table th {
-    background-color: #e6f7e6;
+	background-color: #e6f7e6;
 }
 
 .selected_subject_name {
-    font-weight: bold;
-    color: #4caf50;
+	font-weight: bold;
+	color: #4caf50;
 }
 
 .pagination {
-    text-align: center;
+	text-align: center;
 }
 
 .pagination span {
-    margin: 0 5px;
+	margin: 0 5px;
 }
 
 .pagination a {
-    color: #4caf50;
-    text-decoration: none;
-    padding: 5px 10px;
-    border: 1px solid #4caf50;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+	color: #4caf50;
+	text-decoration: none;
+	padding: 5px 10px;
+	border: 1px solid #4caf50;
+	border-radius: 5px;
+	transition: background-color 0.3s;
 }
 
 .pagination a:hover {
-    background-color: #4caf50;
-    color: #ffffff;
+	background-color: #4caf50;
+	color: #ffffff;
 }
 
 .current-page {
-    background-color: #4caf50;
-    color: #ffffff;
-    padding: 5px 10px;
-    border-radius: 5px;
+	background-color: #4caf50;
+	color: #ffffff;
+	padding: 5px 10px;
+	border-radius: 5px;
 }

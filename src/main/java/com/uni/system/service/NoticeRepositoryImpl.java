@@ -19,7 +19,7 @@ import lombok.NoArgsConstructor;
 @Data
 public class NoticeRepositoryImpl implements NoticeRepository {
 
-	private static final String SELECT_ALL_NOTICE = " SELECT * FROM notice_tb ";
+	private static final String SELECT_ALL_NOTICE = " SELECT * FROM notice_tb ORDER BY created_time DESC LIMIT 8 OFFSET 0; " ;
 	private static final String INSERT_NOTICE = " insert into notice_tb(category,title,content,views) values (?, ?, ?, 0) ";
 
 	@Override

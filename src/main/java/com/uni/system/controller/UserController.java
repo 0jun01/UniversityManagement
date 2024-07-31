@@ -1,10 +1,17 @@
 package com.uni.system.controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 
+import com.uni.system.repository.interfaces.NoticeRepository;
+import com.uni.system.repository.interfaces.ScheduleRepository;
 import com.uni.system.repository.interfaces.UserRepository;
+import com.uni.system.repository.model.NoticeList;
+import com.uni.system.repository.model.Schedule;
 import com.uni.system.repository.model.UserDTO;
+import com.uni.system.service.NoticeRepositoryImpl;
+import com.uni.system.service.ScheduleRepositoryImpl;
 import com.uni.system.service.UserRepositoryImpl;
 
 import jakarta.servlet.ServletException;
@@ -19,9 +26,13 @@ import jakarta.servlet.http.HttpSession;
 public class UserController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	UserRepository userRepository;
+	NoticeRepository noticeRepository;
+	ScheduleRepository scheduleRepository;
 
 	public UserController() {
 		userRepository = new UserRepositoryImpl();
+		noticeRepository = new NoticeRepositoryImpl();
+		scheduleRepository = new ScheduleRepositoryImpl();
 
 	}
 
@@ -39,7 +50,8 @@ public class UserController extends HttpServlet {
 			handleLogout(request, response);
 			break;
 		case "/home":
-			request.getRequestDispatcher("/WEB-INF/views/user/home.jsp").forward(request, response);
+			showHomepage(request,response);
+	
 			break;
 		case "/employee":
 			request.getRequestDispatcher("/WEB-INF/views/user/employeeInfo.jsp").forward(request, response);
@@ -48,6 +60,20 @@ public class UserController extends HttpServlet {
 			response.sendError(HttpServletResponse.SC_NOT_FOUND);
 			break;
 		}
+	}
+
+	private void showHomepage(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		List<NoticeList> noticeList = new ArrayList<NoticeList>();
+		List<Schedule> scheduleList = new ArrayList<Schedule>();
+		
+		
+		scheduleList = scheduleRepository.selectAllscheduleTable();
+		noticeList = noticeRepository.selectAllTable();
+		request.setAttribute("noticeList", noticeList);
+		request.setAttribute("scheduleList", scheduleList);
+		
+		request.getRequestDispatcher("/WEB-INF/views/user/home.jsp").forward(request, response);
+		
 	}
 
 	private void handleLogout(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -97,19 +123,7 @@ public class UserController extends HttpServlet {
 			session.setAttribute("principal", principal); // header.jsp, 각종 info 에 끌고 오기 위해 속성 설정해주기.
 			response.sendRedirect(request.getContextPath() + "/user/home");
 		} else if(userId != principal.getId()){
-			alert(response);
 		}
 
-	}
-	public static void alert(HttpServletResponse response) {
-	    try {
-			response.setContentType("text/html; charset=utf-8");
-			PrintWriter writer = response.getWriter();
-			writer.write("<script>alert('"+"아이디 또는 비밀번호가 잘못되었습니다."+"');</script>");
-			writer.flush();
-			writer.close();
-	    } catch(Exception e) {
-			e.printStackTrace();
-	    }
 	}
 }
