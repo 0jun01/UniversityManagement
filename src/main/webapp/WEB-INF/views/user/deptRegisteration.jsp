@@ -18,8 +18,8 @@
 				<br>
 			</div>
 			<div>
-				<form action="${pageContext.request.contextPath}/admin/updateFilter"
-					method="GET">
+				<form action="${pageContext.request.contextPath}/admin/addFilter"
+					method="POST">
 					<h1>등록하기</h1>
 					<!-- 강의구분 콤보박스 -->
 					<!-- 대상학과 콤보박스 -->

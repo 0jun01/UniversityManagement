@@ -110,13 +110,30 @@ public class RegistrationController extends HttpServlet {
 		staffRepository.deleteDept(deptName);
 	}
 
-	private void updateDept(HttpServletRequest request, HttpServletResponse response)
+	private void addDept(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String deptIdStr = request.getParameter("deptId");
 		String subName = request.getParameter("subName");
 		int deptId = Integer.parseInt(deptIdStr);
 
 		if (deptId != -1) {
+			System.out.println("들어옴? " + deptId + subName);
+			staffRepository.addDept(deptId, subName);
+			request.getRequestDispatcher("/WEB-INF/views/user/collegeUpdate.jsp").forward(request, response);
+		} else {
+			String message = "입력란을 선택하세요";
+			request.setAttribute("message", message);
+			request.getRequestDispatcher("/WEB-INF/views/user/collegeUpdate.jsp").forward(request, response);
+		}
+	}
+	private void updateDept(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		String deptIdStr = request.getParameter("deptId");
+		String subName = request.getParameter("subName");
+		int deptId = Integer.parseInt(deptIdStr);
+		
+		if (deptId != -1) {
+			System.out.println("들어옴? " + deptId + subName);
 			staffRepository.updateDept(deptId, subName);
 			request.getRequestDispatcher("/WEB-INF/views/user/collegeUpdate.jsp").forward(request, response);
 		} else {
@@ -185,6 +202,10 @@ public class RegistrationController extends HttpServlet {
 		case "/updateFilter":
 			viewDept(request, response);
 			updateDept(request, response);
+			break;
+		case "/addFilter":
+			viewDept(request, response);
+			addDept(request, response);
 			break;
 		case "/roomRegister":
 			viewAllRoom(request,response);
